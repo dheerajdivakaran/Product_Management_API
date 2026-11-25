@@ -1,0 +1,61 @@
+###
+POST  http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username": "dheeraj",
+    "email" : "dheeraj@gmail.com",
+    "password": "dheeraj@123"
+}
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+ "username" : "dheeraj",
+ "password" : "dheeraj@123"
+}
+
+###
+POST http://127.0.0.1:8000/product/
+Content-Type: application/json
+Authorization: Token 0f63329eb834f1fd1d8ac7911f81d722474a278a
+
+{
+    "product_name" : "laptop", 
+    "product_code" : 1,
+    "category" : "electronics", 
+    "price" : 20000,
+    "stock_quantity": 10 
+}
+
+###
+GET http://127.0.0.1:8000/product/
+Accept: application/json
+Authorization: Token 0f63329eb834f1fd1d8ac7911f81d722474a278a
+
+
+###
+GET http://127.0.0.1:8000/product/1/
+Accept: application/json
+Authorization: Token 0f63329eb834f1fd1d8ac7911f81d722474a278a
+
+###
+PUT http://127.0.0.1:8000/product/1/
+Content-Type: application/json
+Authorization: Token 0f63329eb834f1fd1d8ac7911f81d722474a278a
+
+{
+    "product_name" : "laptop", 
+    "product_code" : 1,
+    "category" : "electronics", 
+    "price" : 20000,
+    "stock_quantity": 5  
+}
+
+###
+DELETE http://127.0.0.1:8000/product/1/
+Authorization: Token 0f63329eb834f1fd1d8ac7911f81d722474a278a
+
+
